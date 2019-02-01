@@ -24,8 +24,12 @@ class Application
         resp.write "#{item}\n"
       end
     elsif req.path.match(/add/)
-      added_items = req.params["item"]
-      
+      added_item = req.params["item"]
+      if @@items.include?(added_item)
+        @@items << added_item
+        resp.write "added #{added_item}"
+      else 
+        resp.write ""
     else
       resp.write "Path Not Found"
     end
