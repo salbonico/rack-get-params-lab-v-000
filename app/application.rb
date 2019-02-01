@@ -28,7 +28,7 @@ class Application
       if @@items.include?(added_item)
         @@items << added_item
         resp.write "added #{added_item}"
-      else 
+      else
         resp.write ""
     else
       resp.write "Path Not Found"
