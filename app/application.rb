@@ -1,3 +1,4 @@
+require 'pry'
 class Application
 
   @@items = ["Apples","Carrots","Pears"]
@@ -24,7 +25,7 @@ class Application
       end
     elsif req.path.match(/add/)
       added_items = req.params["item"]
-      binding.pry  
+      binding.pry
     else
       resp.write "Path Not Found"
     end
