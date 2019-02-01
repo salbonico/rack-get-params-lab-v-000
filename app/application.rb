@@ -29,7 +29,7 @@ class Application
         @@items << added_item
         resp.write "added #{added_item}"
       else
-        resp.write ""
+        resp.write "We don't have that item"
     else
       resp.write "Path Not Found"
     end
